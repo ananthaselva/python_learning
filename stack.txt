@@ -1,0 +1,40 @@
+def create_stack():
+    stack = []
+    return stack
+
+
+def is_empty(stack):
+    return len(stack) == 0
+
+
+def push_stack(stack, item):
+    stack.append(item)
+
+
+def pop_stack(stack):
+    if is_empty(stack):
+        print("stack underflow...")
+    else:
+        stack.pop()
+
+
+def peak_stack(stack):
+    if is_empty(stack):
+        print("stack underflow...")
+    else:
+        l=len(stack)
+        return stack[l-1]
+
+if __name__ == '__main__':
+    s = create_stack()
+    push_stack(s, 2)
+    print(s)
+    push_stack(s,3)
+    push_stack(s, 8)
+    push_stack(s, 10)
+    print(s)
+    pop_stack(s)
+    print(s)
+    k=peak_stack(s)
+    print(k)
+    print(s)
